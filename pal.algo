@@ -1,0 +1,17 @@
+FUNCTION palaindrom() : BOOLEAN
+VAR
+    left = INTEGER:=0;
+    right= INTEGER:=str.length;
+    str= STRING;
+BEGIN
+    IF (left >= right) THEN
+        return true 
+    END_IF
+    IF (str [left] = str[right] ) THEN
+        return palaindrom(str[left+1], str[right-1])
+    ELSE IF (str [left] <> str[right]) THEN
+        return false 
+    END_IF
+       
+    END_IF
+END
